@@ -11,16 +11,17 @@
   },
   "dependencies": {
     "@app/shared": "file:../../packages/shared",
+    "autoprefixer": "^10.4.22",
+    "postcss": "^8.5.6",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^4.1.17"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.3.1",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.1",
     "typescript": "^5.6.3",
     "vite": "^5.4.8"
   }
 }
-
-
