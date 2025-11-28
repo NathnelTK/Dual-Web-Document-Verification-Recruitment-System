@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import type { Application, Vacancy } from "@app/shared";
 
-const API_BASE = "http://localhost:4000/api/v1";
+const API_BASE = "http://localhost:4001/api/v1";
 
 export default function App() {
 	const [vacancies, setVacancies] = useState<Vacancy[]>([]);
@@ -306,9 +306,8 @@ export default function App() {
 								</>
 							) : (
 								<div className="text-center py-8">
-									<div className={`inline-flex items-center justify-center w-20 h-20 rounded-full mb-4 ${
-										result.status === "accepted" ? "bg-green-100" : "bg-red-100"
-									}`}>
+									<div className={`inline-flex items-center justify-center w-20 h-20 rounded-full mb-4 ${result.status === "accepted" ? "bg-green-100" : "bg-red-100"
+										}`}>
 										{result.status === "accepted" ? (
 											<svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 												<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -319,14 +318,13 @@ export default function App() {
 											</svg>
 										)}
 									</div>
-									<h3 className={`text-2xl font-bold mb-2 ${
-										result.status === "accepted" ? "text-green-600" : "text-red-600"
-									}`}>
+									<h3 className={`text-2xl font-bold mb-2 ${result.status === "accepted" ? "text-green-600" : "text-red-600"
+										}`}>
 										{result.status === "accepted" ? "Application Accepted!" : "Application Rejected"}
 									</h3>
 									<p className="text-gray-600 mb-6">
-										{result.feedback || (result.status === "accepted" 
-											? "Congratulations! You meet all the requirements." 
+										{result.feedback || (result.status === "accepted"
+											? "Congratulations! You meet all the requirements."
 											: "Unfortunately, you don't meet the requirements."
 										)}
 									</p>
